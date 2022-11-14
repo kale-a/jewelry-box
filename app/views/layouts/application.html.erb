@@ -6,24 +6,23 @@
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-
-<header class="portfolio-hero-header">
-  <img class="portfolio-hero-header-logo" src="https://placehold.it/200"/>
-  <h1 class="portfolio-hero-header-h1">My Portfolio</h1>
-  <ul class="portfolio-hero-header-description">
-    <li>Portfolio Example</li>
-    <li>Super Clean</li>
-    <li>Super Simple</li>
-  </ul>
-  <ul class="portfolio-hero-header-menu">
-    <li><a class="button primary" href="#">Link 1</a></li>
-    <li><a class="button primary" href="#">Link 2</a></li>
-    <li><a class="button primary" href="#">Link 3</a></li>
-  </ul>
-</header>
+  <header class="nav-header">
+    <h1 class="title-font">Jewlery Box</h1>
+      <ul class="nav-header-descripiton">
+        <%= link_to 'Explore' %>
+        <%= link_to 'About' %>
+        <a href="/" class="logo"><%= image_tag("icons8-diamond-100.png", alt: "Home") %></a>
+        <%- if current_user -%>
+          <%= link_to 'My Profile' %>
+          <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
+        <%- else -%>
+          <%= link_to 'Sign Up', new_user_registration_path %>
+          <%= link_to 'Sign In', new_user_session_path %>
+        <%- end -%>
+      </ul>
+  </header>
   
-
+<body class="body-bg">
 
   <%- flash.each do |key, value| -%>
     <div class="flash flash-<%= key %>">
