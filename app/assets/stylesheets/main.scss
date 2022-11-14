@@ -1,12 +1,8 @@
 @import "colors";
 @import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Cookie&family=Sacramento&display=swap');
 
-.body {
-   background: $babypeachpink; 
-}
-
-.top-bar {
-  background: $darkerpink;
+.body-bg {
+  background: $peachypink; 
 }
 
 .title-font {
@@ -14,24 +10,18 @@
   font-size: 5rem;
 }
 
-.links-font {
-  font-family: 'Sacramento';
-  font-size: 2rem;
-  font-style: bold
-}
-
-
-.portfolio-hero-header {
+.nav-header {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: $darkerpink;
-  padding: 2rem 0;
+  padding-top: 1rem;
+  padding-bottom: 0;
   font-family: 'Sacramento';
   font-size: 2rem;
 }
 
-.portfolio-hero-header-description {
+.nav-header-description {
   list-style-type: none;
   display: flex;
   justify-content: center;
@@ -43,7 +33,6 @@
     padding: 0 1.25rem;
     position: relative;
     white-space: nowrap;
-    font
 
     &:before {
       content: "*";
@@ -57,20 +46,3 @@
     }
   }
 }
-
-.portfolio-hero-header-menu {
-  list-style-type: none;
-  display: flex;
-  justify-content: center;
-  margin: 0;
-
-  li {
-    margin: 1.25rem;
-
-    a {
-      padding-left: 1.875rem;
-      padding-right: 1.875rem;
-    }
-  }
-}
-
