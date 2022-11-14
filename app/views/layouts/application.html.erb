@@ -6,26 +6,27 @@
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-  
-  <nav class="top-bar">
-    <a href="/" class="logo"><%= image_tag("icons8-diamond-100.png", alt: "Home") %></a>
-    <h1 class="title-font">Jewelry Box</h1>
-      <ul class="menu align-right">
-        <%= link_to 'Home' %> 
-        <%= link_to 'Explore' %>
-        <%= link_to 'About' %>
+  <header class="nav-header">
+    <h1 class="title-font">Jewlery Box</h1>
+      <ul class="nav-header-descripiton">
+        <%= link_to 'Explore' %> |
+        <%= link_to 'About' %> |
+        <a href="/" class="logo"><%= image_tag("icons8-diamond-100.png", alt: "Home") %></a> |
         <%- if current_user -%>
+          <%= link_to 'My Profile' %> |
           <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
         <%- else -%>
+          <%= link_to 'Sign In', new_user_session_path %> |
           <%= link_to 'Sign Up', new_user_registration_path %>
-          <%= link_to 'Sign In', new_user_session_path %>
+          
         <%- end -%>
       </ul>
-  </nav>
+  </header>
+  
+<body class="body-bg">
 
   <%- flash.each do |key, value| -%>
-    <div class="flash flash-<%= key %>">
+    <div class="flash flash-<%= key %> devise-font">
       <%= value %>
     </div>
   <%- end -%>

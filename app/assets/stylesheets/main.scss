@@ -1,16 +1,66 @@
 @import "colors";
-@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Cookie&display=swap');
-
-.body {
-   background: $babypeachpink; 
-}
-
-.top-bar {
-  background: $darkerpink;
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Cookie&family=Montserrat:wght@300&family=Sacramento&display=swap');
+.body-bg {
+  background: $peachypink; 
 }
 
 .title-font {
-  font-family: 'Clicker Script', cursive;
+  font-family: 'Sacramento';
   font-size: 5rem;
 }
 
+.header-font {
+  font-family: 'Sacramento';
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.forms {
+  font-family: 'Montserrat';
+  margin: auto;
+  width: 30%;
+  padding-top: 1rem
+}
+
+.devise-font {
+  font-family: 'Montserrat';
+  font-size: 1rem;
+}
+
+.nav-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $darkerpink;
+  padding-top: 1rem;
+  padding-bottom: 0;
+  font-family: 'Sacramento';
+  font-size: 2rem;
+}
+
+.nav-header-description {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+
+  li {
+    flex: 1 0 200px;
+    text-align: center;
+    padding: 0 1.25rem;
+    position: relative;
+    white-space: nowrap;
+
+    &:before {
+      content: "*";
+      position: absolute;
+      left: 0;
+      top: 5px;
+    }
+
+    &:first-child:before {
+      content: "";
+    }
+  }
+}
