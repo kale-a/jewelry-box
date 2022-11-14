@@ -1,6 +1,5 @@
 @import "colors";
-@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Cookie&family=Sacramento&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Cookie&family=Montserrat:wght@300&family=Sacramento&display=swap');
 .body-bg {
   background: $peachypink; 
 }
@@ -8,6 +7,25 @@
 .title-font {
   font-family: 'Sacramento';
   font-size: 5rem;
+}
+
+.header-font {
+  font-family: 'Sacramento';
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.forms {
+  font-family: 'Montserrat';
+  margin: auto;
+  width: 30%;
+  padding-top: 1rem
+}
+
+.devise-font {
+  font-family: 'Montserrat';
+  font-size: 1rem;
 }
 
 .nav-header {
