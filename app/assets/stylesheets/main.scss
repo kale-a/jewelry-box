@@ -29,6 +29,13 @@
   }
 }
 
+.page-font {
+  font-family: 'Montserrat';
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .devise-font {
   font-family: 'Montserrat';
   font-size: 1rem;
@@ -69,4 +76,8 @@
       content: "";
     }
   }
+}
+
+.margin-padding {
+  padding: 2rem;
 }
