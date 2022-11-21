@@ -4,6 +4,7 @@ import PieceTile from './PieceTile'
 
 const UserIndex = (props) => {
   const [users, setUsers] = useState([])
+  const [pieces, setPieces] = useState([])
 
   const getUsers = async () => {
     try {
@@ -12,8 +13,27 @@ const UserIndex = (props) => {
         const errorMessage = `${response.status} (${response.statusText})`
         throw new Error(errorMessage)
       }
-      const responseBody = await response.json()
-      setUsers(responseBody.users)
+      const responseBodyUsers = await response.json()
+      debugger
+      setUsers(responseBodyUsers.users)
+
+    } catch (error) {
+      console.error(`Error in Fetch: ${error.message}`)
+    }
+  }
+
+  const userID = props.match.params.id
+
+  const getPieces = async () => {
+    try {
+      const response = await fetch(`/api/v1/users/${userID}`)
+      if (!response.ok) {
+        const errorMessage = `${response.status} (${response.statusText})`
+        throw new Error(errorMessage)
+      }
+      const responseBodyPieces = await response.json()
+      debugger
+      setPieces(responseBodyPieces.pieces)
 
     } catch (error) {
       console.error(`Error in Fetch: ${error.message}`)
@@ -22,6 +42,7 @@ const UserIndex = (props) => {
 
   useEffect(() => {
     getUsers()
+    getPieces()
   }, [])
 
   const userTiles = users.map(user => {
@@ -35,21 +56,22 @@ const UserIndex = (props) => {
       />
     )
   })
-  // const pieceTiles = users.map(piece => {
-  //   return (
-  //     <PieceTile
-  //       key={users.pieces.id}
-  //       id={users.piece.id}
-  //       piece_photo={users.pieces.piece_photo}
-  //     />
-  //   )
-  // })
+  const pieceTiles = pieces.map(piece => {
+    return (
+      <PieceTile
+        key={pieces.id}
+        id={piece.id}
+        piece_photo={pieces.piece_photo}
+        piece_title={pieces.title}
+      />
+    )
+  })
 
   return (
     <div className="margin-padding">
       <h4 className="page-font">Get some inspiration!</h4>
       {userTiles}
-      {/* {pieceTiles} */}
+      {pieceTiles}
       
     </div>
   )
