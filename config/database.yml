@@ -83,3 +83,4 @@ production:
   database: jewelry-box_production
   username: jewelry-box
   password: <%= ENV['JEWELRY-BOX_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>

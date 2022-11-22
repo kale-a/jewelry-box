@@ -3,6 +3,7 @@ import UserTile from './UserTile'
 
 const UserIndex = (props) => {
   const [users, setUsers] = useState([])
+  const [pieces, setPieces] = useState([])
 
   const getUsers = async () => {
     try {
@@ -11,8 +12,27 @@ const UserIndex = (props) => {
         const errorMessage = `${response.status} (${response.statusText})`
         throw new Error(errorMessage)
       }
-      const responseBody = await response.json()
-      setUsers(responseBody.users)
+      const responseBodyUsers = await response.json()
+      debugger
+      setUsers(responseBodyUsers.users)
+
+    } catch (error) {
+      console.error(`Error in Fetch: ${error.message}`)
+    }
+  }
+
+  const userID = props.match.params.id
+
+  const getPieces = async () => {
+    try {
+      const response = await fetch(`/api/v1/users/${userID}`)
+      if (!response.ok) {
+        const errorMessage = `${response.status} (${response.statusText})`
+        throw new Error(errorMessage)
+      }
+      const responseBodyPieces = await response.json()
+      debugger
+      setPieces(responseBodyPieces.pieces)
 
     } catch (error) {
       console.error(`Error in Fetch: ${error.message}`)
@@ -21,6 +41,7 @@ const UserIndex = (props) => {
 
   useEffect(() => {
     getUsers()
+    getPieces()
   }, [])
 
   const userTiles = users.map(user => {
