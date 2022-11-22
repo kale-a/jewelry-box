@@ -1,34 +1,21 @@
-import React from "react";
-import PieceTile from "./PieceTile";
+import React, { useState, useEffect } from 'react'
 import UserTile from "./UserTile";
+import PieceTile from './PieceTile';
 
 const UserShow = (props) => {
-  
-  const userTiles = props.users.map(user => {
-    return (
-      <UserTile
-        key={user.id}
-        id={user.id}
-        profile_photo={user.profile_photo}
-        username={user.username}
-        jewelry_box_name={user.jewelry_box_name}
-      />
-    )
-  })
 
-  const pieceTiles = props.pieces.map(piece => {
+  const pieceTiles = props.pieces.map((piece) => {
     return (
       <PieceTile
         key={piece.id}
         id={piece.id}
-        piece_photo={piece.piece_photo}
+        jewelry_type={piece.jewelry_type}
       />
     )
   })
 
   return (
     <div>
-      {userTiles}
       {pieceTiles}
     </div>
   )

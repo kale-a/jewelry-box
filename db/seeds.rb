@@ -23,15 +23,17 @@ earrings1 = Piece.find_or_create_by(
   title: "swords",
   description: "so many compliments",
   notes: "a little long",
+  piece_photo: "https://m.media-amazon.com/images/I/51yJ--Q8zJS._AC_UX679_.jpg",
   categories: [description1]
 )
 
 user1 = User.create(
-  email: "test@test.com",
-  username: "test",
+  email: "test3@test.com",
+  username: "test3",
   password: "password",
-  jewelry_box_name: "testBox",
-  pieces: [earrings1]
+  jewelry_box_name: "testBox3",
+  profile_photo: "https://i.pinimg.com/564x/c3/7f/9b/c37f9b54267eabd8db8886d6cca548f0.jpg",
+  pieces:[earrings1]
 )
 
 # 1. list of Users (index)

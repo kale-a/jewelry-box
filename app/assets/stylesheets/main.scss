@@ -81,3 +81,26 @@
 .margin-padding {
   padding: 2rem;
 }
+
+.index-user-photo {
+  height: 3rem;
+  width: 3rem;
+}
+
+.index-piece-photo {
+  height: 5rem;
+  width: 5rem;
+}
+
+.callout {
+  border-radius: 1rem;
+}
+
+.grid-margin-x {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  padding-bottom: 2rem;
+  row-gap: 2rem;
+  column-gap: 2rem;
+  border-spacing: 5rem;
+}

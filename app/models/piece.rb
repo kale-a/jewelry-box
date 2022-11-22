@@ -5,5 +5,5 @@ class Piece < ApplicationRecord
   has_many :categories, through: :categorizations
   belongs_to :user
 
-  mount_uploader :piece_photo, PiecePhotoUploader
+  # mount_uploader :piece_photo, PiecePhotoUploader
 end
