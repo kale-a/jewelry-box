@@ -11,8 +11,7 @@ const CollectionShowContainer = (props) => {
         jewelry_type={piece.jewelry_type}
         title={piece.title}
         piece_photo={piece.piece_photo}
-        description={piece.description}
-        notes={piece.notes}
+        categories={piece.categories}
       />
     )
   }) 
