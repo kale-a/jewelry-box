@@ -1,11 +1,11 @@
-import React from "react";
-import PieceTile from "./PieceTile";
+import React, {useState, useEffect} from "react";
+import CollectionShow from "./CollectionShow";
 
-const PieceList = (props) => {
-
-  const pieceTiles = props.pieces.map(piece => {
+const CollectionShowContainer = (props) => {
+  
+  const collection = props.pieces.map(piece => {
     return (
-      <PieceTile
+      <CollectionShow
         key={piece.id}
         id={piece.id}
         jewelry_type={piece.jewelry_type}
@@ -15,12 +15,12 @@ const PieceList = (props) => {
         notes={piece.notes}
       />
     )
-  })
-  
+  }) 
   return (
     <div>
-      {pieceTiles}
+      {collection}
     </div>
   )
 }
-export default PieceList
+
+export default CollectionShowContainer
