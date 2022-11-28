@@ -17,6 +17,24 @@
   align-items: center;
 }
 
+.about-header {
+  font-family: 'Sacramento';
+  font-style: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2.5rem;
+}
+
+.about-text {
+  font-family: 'Montserrat';
+  margin-left: 10rem;
+  margin-right: 10rem;
+  font-size: 1.2rem;
+  text-align: justify;
+  text-justify: auto;
+}
+
 .forms {
   font-family: 'Montserrat';
   margin: auto;
@@ -93,10 +111,6 @@
   width: 5rem;
 }
 
-.callout {
-  border-radius: 1rem;
-}
-
 .grid-margin-x {
   margin-left: 2rem;
   margin-right: 2rem;
@@ -105,3 +119,16 @@
   column-gap: 2rem;
   border-spacing: 5rem;
 }
+
+.collection-piece-photo {
+  display: block;
+  max-height: 7rem;
+  max-width: 7rem;
+}
+
+.callout {
+  border-radius: 1rem;
+  width: 25rem;
+  height: 20rem;
+}
+

@@ -9,14 +9,13 @@ const CollectionShowContainer = (props) => {
         key={piece.id}
         id={piece.id}
         jewelry_type={piece.jewelry_type}
-        title={piece.title}
         piece_photo={piece.piece_photo}
         categories={piece.categories}
       />
     )
   }) 
   return (
-    <div>
+    <div className="grid-x grid-margin-x">
       {collection}
     </div>
   )

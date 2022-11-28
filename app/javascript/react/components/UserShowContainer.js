@@ -30,7 +30,7 @@ const UserShowContainer = (props) => {
 
   
   return (
-    <div>
+    <div className="margin-padding">
       <UserShow
         key={user.id}
         id={user.id}
@@ -38,11 +38,10 @@ const UserShowContainer = (props) => {
         username={user.username}
         jewelry_box_name={user.jewelry_box_name}
       />
-
-    <CollectionShowContainer 
-      pieces={user.pieces} 
-    />
-
+      
+      <CollectionShowContainer 
+        pieces={user.pieces} 
+      />
     </div>
     )
   }

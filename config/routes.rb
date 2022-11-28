@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get "/users", to: "static_pages#index"
   get "/users/:id", to: "static_pages#index"
   get "/users/:id/pieces", to: "static_pages#index"
+  get "/about", to: "static_pages#index"
 
   namespace :api do
     namespace :v1 do
