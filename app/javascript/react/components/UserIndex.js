@@ -39,14 +39,10 @@ const UserIndex = (props) => {
   return (
     <div className="margin-padding">
       <h4 className="page-font">Get some inspiration!</h4>
-      <div className="grid-x">
-        <div className="large-12">
-          <div className="grid-x grid-margin-x">
-            {userTiles}
-          </div>
+        <div className="grid-x grid-margin-x">
+        {userTiles}
         </div>
-        </div>
-    </div>
+  </div>
   )
 }
 

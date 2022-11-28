@@ -10,7 +10,7 @@
     <h1 class="title-font">Jewlery Box</h1>
       <ul class="nav-header-descripiton">
         <%= link_to 'Explore' %> |
-        <%= link_to 'About' %> |
+        <%= link_to 'About', "/about/" %> |
         <a href="/" class="logo"><%= image_tag("icons8-diamond-100.png", alt: "Home") %></a> |
         <%- if current_user -%>
           <%= link_to 'My Profile', "/users/#{current_user.id}" %> |

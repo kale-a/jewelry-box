@@ -16,12 +16,15 @@ const CollectionShow = (props) => {
     )
   })
   return (
-    <div>
-      <img src={props.piece_photo}/> <br />
+    <div className="grid-x grid-margin-x callout">
+      <div className="collection-piece-photo">
+        <img  src={props.piece_photo}/> <br />
+      </div>
       <i>{props.title}</i> <br />
       Type: {props.jewelry_type}
       {categories}
     </div>
+
   )
 }
 
